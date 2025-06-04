@@ -2,6 +2,7 @@ console.log("web serverni boshlash");
 const express = require("express");
 const app = express();
 const http = require("http");
+const fs = require("fs");
 
 //1 kirish kodlari
 //expressga kirib kelayotgan malumotlarga bogliq bolgan codlar yoziladi
@@ -17,12 +18,15 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 //4 routing code
-app.get("/hello", function(req, res) {
-    res.end(`<h1 style="background: red">HELLO  WORLD by aziza</h1>`);
-});
+app.post("/create-item", (req, res) => {
+    //TODO: code with db here
+})
 
-app.get("/gift", function(req, res) {
-    res.end(`<h1">siz sovg'alar bo'limidasiz</h1>`);
+app.get('/author', (req, res) => {
+    res.render("author",{user: user});
+});
+app.get("/", function (req , res) {
+    res.render("harid");
 });
 
 const server = http.createServer(app);
