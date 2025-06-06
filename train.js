@@ -8,6 +8,8 @@ const list = [
  "endi dam oling, foydasi yoq endi", // 60 
 ];
 
+
+//callback function
 function maslahatBering (a, callback) {
     if (typeof a!== "number") callback("insert a number", null);
     else if (a<= 20) callback(null, list[0]);
@@ -31,6 +33,8 @@ maslahatBering(70, (err,data) => {
 });
 console.log("passed here 1");
 
+
+//async function
 //async function maslahatBering(a) {
 //if(typeof a !== 'number') throw new Error ("insert a number",null);
 //else if(a <= 20) return list[0];
@@ -51,7 +55,7 @@ console.log("passed here 1");
 //}
 //}
 
-//then/catch
+// call via then/catch
 //console.log("passed here 0");
 //maslahatBering(65)
   //.then(data) => {
@@ -74,3 +78,20 @@ console.log("passed here 1");
       // console.log(javob);
     //}
     //run();
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////
+
+    //A-Task
+    function countLetter(letter, text) {
+  let count =0;
+  for (let i = 0; i< text.length; i++) {
+    if (text[i] === letter){
+      count++;
+    }
+  }
+  return count;
+};
+
+console.log(countLetter("z","razzmatazz"));
+console.log(countLetter("a","azizazizaaziza"));
