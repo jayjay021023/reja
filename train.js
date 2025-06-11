@@ -95,3 +95,5 @@ console.log("passed here 1");
 
 console.log(countLetter("z","razzmatazz"));
 console.log(countLetter("a","azizazizaaziza"));
+
+//b-task
