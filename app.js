@@ -14,7 +14,7 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
 });
 
 //MongoDB connect
-const db = require("./server"); 
+const db = require("./server").db();
 
 // 1. KIrish code // 
 app.use(express.static("public")); 
