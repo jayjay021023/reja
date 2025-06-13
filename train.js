@@ -124,7 +124,7 @@ class Shop {
     const now = new Date();
     const soat = now.getHours().toString().padStart(2, '0');
     const minut = now.getMinutes().toString().padStart(2, '0');
-    return Hozir `${soat}:${minut}`;
+    return  `${soat}:${minut}`;
   }
 
   qoldiq() {
@@ -160,3 +160,5 @@ shop.qoldiq();
 shop.sotish("non", 6); 
 shop.qabul("cola", 4); 
 shop.qoldiq(); 
+
+console.log(shop.qoldiq);
