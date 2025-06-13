@@ -109,3 +109,54 @@ function countDigits(str) {
 
 // TEST
 console.log(countDigits("ad2a54y79wet0sfgb9")); 
+
+//mitask C
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.products = {
+      non: non,
+      lagmon: lagmon,
+      cola: cola
+    };
+  }
+
+  getTime() {
+    const now = new Date();
+    const soat = now.getHours().toString().padStart(2, '0');
+    const minut = now.getMinutes().toString().padStart(2, '0');
+    return Hozir `${soat}:${minut}`;
+  }
+
+  qoldiq() {
+    console.log(`${this.getTime()}da ${this.products.non}ta non, ${this.products.lagmon}ta lag'mon va ${this.products.cola}ta cola mavjud`);
+  }
+
+  sotish(nomi, miqdor) {
+    if (this.products[nomi] === undefined) {
+      console.log(`${nomi}, mahsuloti mavjud emas!`);
+      return;
+    }
+    if (this.products[nomi] < miqdor) {
+      console.log(`Kechirasiz, yetarli ${nomi} yo‘q.`);
+      return;
+    }
+    this.products[nomi] -= miqdor;
+    console.log(`${this.getTime()},da ${miqdor},ta ${nomi}, sotildi`);
+  }
+
+  qabul(nomi, miqdor) {
+    if (this.products[nomi] === undefined) {
+      this.products[nomi] = 0;
+    }
+    this.products[nomi] += miqdor;
+    console.log(`${this.getTime()}da ${miqdor}ta ${nomi} qabul qilindi`);
+  }
+}
+
+
+const shop = new Shop(4, 5, 2);
+
+shop.qoldiq(); 
+shop.sotish("non", 6); 
+shop.qabul("cola", 4); 
+shop.qoldiq(); 
