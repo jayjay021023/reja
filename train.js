@@ -109,4 +109,3 @@ function countDigits(str) {
 
 // TEST
 console.log(countDigits("ad2a54y79wet0sfgb9")); 
-console.log(countDigits("bhs8db26cs2ch2sb3c4h9s8dc"));
