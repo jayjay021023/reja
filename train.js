@@ -162,3 +162,24 @@ shop.qabul("cola", 4);
 shop.qoldiq(); 
 
 console.log(shop.qoldiq);
+
+
+//task d
+function checkContent(str1, str2, str3, str4) {
+  
+  let sorted1 = 
+  str1.split('').sort().join('');
+  let sorted2 =
+   str2.split('').sort().join('');
+  
+  
+  return sorted1 === sorted2;
+}
+
+let str1= "santa";
+let str2 = "perth";
+console.log(checkContent(str1,str2));
+
+let str3= "cola";
+let str4 = "acol";
+console.log(checkContent(str3,str4));
