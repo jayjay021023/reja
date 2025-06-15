@@ -9,7 +9,7 @@ function itemTemplate(item) {
           <div>
             <button
               data-id="${item._id}"
-              class="delete-me btn btn-secondary btn-sm mr-1"
+              class="edit-me btn btn-secondary btn-sm mr-1"
             >
               O'zgartirish
             </button>
