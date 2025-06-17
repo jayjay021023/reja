@@ -183,3 +183,13 @@ console.log(checkContent(str1,str2));
 let str3= "cola";
 let str4 = "acol";
 console.log(checkContent(str3,str4));
+
+//task E
+function getReverse(text) {
+  return text.split('').reverse().join('');
+}
+let a ="hello world";
+let natija = getReverse (a);
+
+//
+console.log(natija);
