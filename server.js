@@ -1,5 +1,4 @@
 const http = require("http");
-
 const mongodb = require("mongodb");
 
 let db;
@@ -13,18 +12,20 @@ mongodb.connect(
     useUnifiedTopology: true,
   },
   (err, client) => {
-    if (err) console.log("ERROR on connction MongoDB");
-    else {
+    if (err) {
+      console.log("ERROR on connection MongoDB");
+    } else {
       console.log("MongoDB connection succeed");
-      module.exports = client;
 
-      const app = require("./app");
+      db = client.db("Reja");
+      module.exports = { db: () => db }; // ✅ db() funktsiya shaklida eksport
+
+      const app = require("./app"); // app.js fayl
       const server = http.createServer(app);
-      let PORT = 3012;
+      const PORT = 3012;
+
       server.listen(PORT, function () {
-        console.log(
-          `The server is runnning successfully on port: ${PORT}, http://localhost:${PORT}`
-        );
+        console.log(` Server is running on http://localhost:${PORT}`);
       });
     }
   }
