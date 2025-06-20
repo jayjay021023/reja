@@ -193,3 +193,25 @@ let natija = getReverse (a);
 
 //
 console.log(natija);
+
+
+//task-f
+function findDoublers(str) {
+  let seen = new Set();
+
+  for (let char of str) {
+    if (seen.has(char)) {
+      return true; 
+    }
+    seen.add(char);
+  }
+
+  return false; 
+}
+
+
+let b = "hello world";
+let javob = findDoublers (b);
+
+//
+console.log(javob);
