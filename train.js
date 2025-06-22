@@ -215,3 +215,25 @@ let javob = findDoublers (b);
 
 //
 console.log(javob);
+
+//task-g
+function getHighestIndex(arr) {
+  
+  let max = arr[0];
+  let maxIndex = 0;
+
+  
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+      maxIndex = i;
+    }
+  }
+
+  return maxIndex;
+}
+
+let i = [4, 21 ,34,8,5];
+let answer = getHighestIndex (i);
+
+console.log(answer);
